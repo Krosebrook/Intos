@@ -2,7 +2,15 @@
 
 /* INT OS Design Tokens */
 :root {
-  /* Brand Colors - Brighter palette */
+  /* Official INT Inc. Brand Colors - intinc.com */
+  --int-dark-blue: #33475B;      /* Dark blue - links, secondary elements */
+  --int-orange: #E27305;         /* Orange - CTA buttons, primary actions */
+  --int-green: #46A57B;          /* Green - success states, positive metrics */
+  --int-medium-blue: #529ADB;    /* Medium blue - primary highlights, dividers */
+  --int-dark-grey: #333333;      /* Dark grey - text, footer */
+  --int-light-grey: #DDDDDD;     /* Light grey - borders, dividers */
+  
+  /* Background Colors - Dark navy gradient maintained */
   --int-bg: #1A2F4D;
   --int-bg-end: #0F1E33;
   --int-surface: #2A4365;
@@ -12,40 +20,39 @@
   --int-subtext: #E2E8F0;
   --int-muted: #CBD5E0;
   
-  /* Primary Brand Colors - Super vibrant */
-  --int-primary: #00E5FF;
-  --int-primary-hover: #33EBFF;
-  --int-primary-muted: #00C4E0;
+  /* Primary Brand Colors - Using INT Inc. palette */
+  --int-primary: #529ADB;        /* Medium blue for primary actions */
+  --int-primary-hover: #6AAEE5;
+  --int-primary-muted: #4287C4;
   
-  /* Secondary Colors - Bright */
-  --int-secondary: #6B9FFF;
-  --int-secondary-hover: #8FB3FF;
+  /* Secondary Colors - Dark blue */
+  --int-secondary: #33475B;
+  --int-secondary-hover: #45596D;
   
-  /* Accent Colors - Vivid */
-  --int-accent: #FF7A50;
-  --int-accent-hover: #FF9470;
-  --int-purple: #B794F6;
-  --int-green: #48E5AC;
-  --int-yellow: #FCD34D;
+  /* Accent Colors - INT Inc. brand palette */
+  --int-accent: #E27305;         /* Orange for CTAs */
+  --int-accent-hover: #F08515;
+  --int-purple: #6B5B95;         /* Adjusted purple to complement brand */
+  --int-yellow: #F5A623;         /* Warm amber to complement orange */
   
-  /* Semantic States - Bright and clear */
-  --success: #34D399;
-  --success-bg: #34D39930;
-  --warning: #FBBF24;
-  --warning-bg: #FBBF2430;
-  --error: #F87171;
-  --error-bg: #F8717130;
-  --info: #60A5FA;
-  --info-bg: #60A5FA30;
+  /* Semantic States - Using brand green + complementary colors */
+  --success: #46A57B;            /* INT Inc. green */
+  --success-bg: #46A57B30;
+  --warning: #F5A623;
+  --warning-bg: #F5A62330;
+  --error: #E85D75;
+  --error-bg: #E85D7530;
+  --info: #529ADB;               /* INT Inc. medium blue */
+  --info-bg: #529ADB30;
   
   /* Interactive States */
   --hover-lift: 2px;
-  --focus-ring: #00E5FF;
+  --focus-ring: #529ADB;         /* Medium blue for focus states */
   
-  /* Border Colors - Much more visible */
-  --border-default: rgba(255, 255, 255, 0.25);
-  --border-hover: rgba(0, 229, 255, 0.5);
-  --border-active: rgba(0, 229, 255, 0.8);
+  /* Border Colors - Using brand colors */
+  --border-default: rgba(221, 221, 221, 0.15);      /* Light grey with transparency */
+  --border-hover: rgba(82, 154, 219, 0.5);          /* Medium blue on hover */
+  --border-active: rgba(226, 115, 5, 0.8);          /* Orange on active */
   
   /* Spacing Scale */
   --space-1: 4px;
@@ -201,12 +208,12 @@ small {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--int-teal);
+  background: var(--int-medium-blue);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00B8CC;
+  background: var(--int-primary-hover);
 }
 
 /* Focus Styles */
