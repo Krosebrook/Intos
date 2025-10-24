@@ -1,0 +1,48 @@
+{
+  "name": "INT OS v2.5 Scrollscape",
+  "short_name": "INT OS",
+  "description": "Unified operations platform with 18 AI-powered apps for support, analytics, automation, and team management",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1F3A",
+  "theme_color": "#0097A9",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "InsightHub",
+      "short_name": "Analytics",
+      "description": "Real-time analytics dashboard",
+      "url": "/?app=insights",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "ResolveDesk",
+      "short_name": "Support",
+      "description": "AI-powered support tickets",
+      "url": "/?app=resolve",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "FlowForge",
+      "short_name": "Automation",
+      "description": "Workflow automation builder",
+      "url": "/?app=flow",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
