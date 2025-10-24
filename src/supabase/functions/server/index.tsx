@@ -3,6 +3,7 @@ import { cors } from "npm:hono/cors";
 import { logger } from "npm:hono/logger";
 import { createClient } from 'npm:@supabase/supabase-js@2';
 import * as kv from "./kv_store.tsx";
+import integrations from "./integrations.tsx";
 
 const app = new Hono();
 
@@ -25,6 +26,11 @@ app.use(
     maxAge: 600,
   }),
 );
+
+// Mount integration routes
+app.route('/make-server-07d6ee5a/hubspot', integrations);
+app.route('/make-server-07d6ee5a/freshdesk', integrations);
+app.route('/make-server-07d6ee5a/teams', integrations);
 
 // Middleware to validate auth token (for protected routes)
 async function validateAuth(authHeader: string | null) {
