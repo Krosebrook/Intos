@@ -21,6 +21,10 @@ import { AcademyPortal } from './components/apps/AcademyPortal';
 import { PulseBoard } from './components/apps/PulseBoard';
 import { BrainDock } from './components/apps/BrainDock';
 import { TriageLens } from './components/apps/TriageLens';
+import { UnifiedInbox } from './components/apps/UnifiedInbox';
+import { KnowledgeHub } from './components/apps/KnowledgeHub';
+import { IntegrationHub } from './components/apps/IntegrationHub';
+import { WorkflowEngine } from './components/apps/WorkflowEngine';
 import { GenericApp } from './components/apps/GenericApp';
 
 export default function App() {
@@ -124,6 +128,14 @@ export default function App() {
         return <BrainDock />;
       case '/triage':
         return <TriageLens />;
+      case '/inbox':
+        return <UnifiedInbox />;
+      case '/knowledge':
+        return <KnowledgeHub />;
+      case '/integrations':
+        return <IntegrationHub />;
+      case '/workflows':
+        return <WorkflowEngine />;
       default:
         // Use GenericApp for other apps
         const app = APPS.find(a => a.path === currentPath);
