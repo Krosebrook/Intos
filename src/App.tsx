@@ -25,6 +25,10 @@ import { UnifiedInbox } from './components/apps/UnifiedInbox';
 import { KnowledgeHub } from './components/apps/KnowledgeHub';
 import { IntegrationHub } from './components/apps/IntegrationHub';
 import { WorkflowEngine } from './components/apps/WorkflowEngine';
+import { CalendarSync } from './components/apps/CalendarSync';
+import { FileVault } from './components/apps/FileVault';
+import { AnalyticsStudio } from './components/apps/AnalyticsStudio';
+import { SurveyCenter } from './components/apps/SurveyCenter';
 import { GenericApp } from './components/apps/GenericApp';
 
 export default function App() {
@@ -136,6 +140,14 @@ export default function App() {
         return <IntegrationHub />;
       case '/workflows':
         return <WorkflowEngine />;
+      case '/calendar':
+        return <CalendarSync />;
+      case '/files':
+        return <FileVault />;
+      case '/analytics':
+        return <AnalyticsStudio />;
+      case '/surveys':
+        return <SurveyCenter />;
       default:
         // Use GenericApp for other apps
         const app = APPS.find(a => a.path === currentPath);

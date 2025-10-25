@@ -1,0 +1,43 @@
+# INT OS v2.5 - Robots.txt
+# https://intos.io/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /apps/
+Allow: /docs/
+Allow: /pricing
+Allow: /features
+Allow: /integrations
+Allow: /contact
+
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /supabase/
+
+# Sitemap
+Sitemap: https://intos.io/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 0
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
