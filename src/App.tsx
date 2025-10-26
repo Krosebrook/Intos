@@ -173,7 +173,7 @@ export default function App() {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
       {/* Fixed Background with Particles */}
-      <div className="fixed inset-0 bg-gradient-to-b from-[#1A2F4D] to-[#0F1E33]" style={{ zIndex: -1 }} />
+      <div className="fixed inset-0 bg-gradient-to-b from-[#33475B] to-[#202D3A]" style={{ zIndex: -1 }} />
       <ParticleField />
 
       {/* Top Navigation */}
@@ -201,29 +201,30 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-white/10 mt-12 py-6">
+        <footer className="border-t border-[#33475B]/20 mt-12 py-6">
           <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#A8B2C1]">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 int-body-sm text-[#999999]">
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6">
-                <span>© 2025 INT OS v2.5.0</span>
-                <button className="hover:text-white transition-colors">
+                <span style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>© 2025 INT OS v2.5.0</span>
+                <button className="hover:text-[#529ADB] transition-colors" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
                   Feedback
                 </button>
                 <button 
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#529ADB] transition-colors"
                   onClick={() => setIsAssistantOpen(!isAssistantOpen)}
+                  style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}
                 >
                   Accessibility
                 </button>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <select className="bg-white/5 border border-white/10 rounded px-3 py-1 text-xs sm:text-sm">
+                <select className="bg-white/5 border border-[#33475B]/20 rounded px-3 py-1 text-[#666666] int-focus-ring" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
                   <option>English</option>
                   <option>Español</option>
                   <option>Français</option>
                   <option>العربية</option>
                 </select>
-                <button className="text-[#0097A9] hover:text-[#00B8CC] transition-colors">
+                <button className="text-[#529ADB] hover:text-[#67A6DF] transition-colors" style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}>
                   Documentation →
                 </button>
               </div>
@@ -253,9 +254,10 @@ export default function App() {
         position="bottom-right"
         toastOptions={{
           style: {
-            background: '#172235',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            color: '#FFFFFF',
+            background: '#F9FAFB',
+            border: '1px solid #33475B20',
+            color: '#33475B',
+            fontFamily: "'Roboto', system-ui, sans-serif",
           },
         }}
       />
@@ -263,7 +265,7 @@ export default function App() {
       {/* AI Assistant Toggle Button (Mobile) */}
       <button
         onClick={() => setIsAssistantOpen(!isAssistantOpen)}
-        className="fixed bottom-6 right-6 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#00D9FF] to-[#5B8DEE] rounded-full shadow-lg flex items-center justify-center md:hidden z-50 hover:scale-110 transition-transform hover:shadow-[0_0_20px_rgba(0,217,255,0.4)]"
+        className="fixed bottom-6 right-6 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#E27305] to-[#46A57B] rounded-full shadow-lg flex items-center justify-center md:hidden z-50 hover:scale-110 transition-transform hover:shadow-[0_0_20px_rgba(226,115,5,0.4)]"
         aria-label="Toggle AI Assistant"
       >
         <svg
@@ -285,7 +287,7 @@ export default function App() {
       {isMobile && !isSidebarExpanded && (
         <button
           onClick={() => setIsSidebarExpanded(true)}
-          className="fixed bottom-6 left-6 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-white/20 transition-all"
+          className="fixed bottom-6 left-6 w-12 h-12 bg-[#33475B] backdrop-blur-sm border border-[#33475B]/40 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-[#3D5266] transition-all"
           aria-label="Open Menu"
         >
           <svg

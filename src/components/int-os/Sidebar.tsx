@@ -46,24 +46,25 @@ export function Sidebar({ currentPath, onNavigate, isExpanded: controlledExpande
       )}
 
       <aside
-        className={`fixed left-0 top-16 bottom-0 glass-effect border-r border-white/10 transition-all duration-300 z-40 ${
+        className={`fixed left-0 top-16 bottom-0 glass-effect border-r border-[#33475B]/20 transition-all duration-300 z-40 bg-[#F9FAFB] ${
           isExpanded ? 'w-72' : 'w-20'
         } ${isMobile && !isExpanded ? '-translate-x-full' : 'translate-x-0'}`}
         role="navigation"
         aria-label="App navigation"
+        style={{ fontFamily: "'Rubik', system-ui, sans-serif" }}
       >
         <div className="flex flex-col h-full">
           {/* Toggle Button */}
-          <div className="flex items-center justify-between p-4 border-b border-white/5">
+          <div className="flex items-center justify-between p-4 border-b border-[#33475B]/10">
             {isExpanded && isMobile && (
-              <span className="text-sm">Menu</span>
+              <span className="int-body-sm text-[#33475B]">Menu</span>
             )}
             <Button
               variant="ghost"
               size="icon"
               onClick={handleToggle}
               aria-label={isExpanded ? 'Collapse sidebar' : 'Expand sidebar'}
-              className="hover:bg-white/10 ml-auto"
+              className="hover:bg-[#33475B]/10 ml-auto text-[#33475B]"
             >
               {isMobile && isExpanded ? (
                 <X className="w-5 h-5" />
@@ -90,15 +91,16 @@ export function Sidebar({ currentPath, onNavigate, isExpanded: controlledExpande
                           onClick={() => onNavigate(app.path)}
                           className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
                             isActive
-                              ? 'bg-[#00E5FF]/20 text-[#00E5FF] border-l-2 border-[#00E5FF]'
-                              : 'text-[#A8B2C1] hover:bg-white/5 hover:text-white'
+                              ? 'bg-[#E27305]/10 text-[#E27305] border-l-2 border-[#E27305]'
+                              : 'text-[#666666] hover:bg-[#33475B]/5 hover:text-[#33475B]'
                           }`}
                           aria-label={app.name}
                           aria-current={isActive ? 'page' : undefined}
+                          style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}
                         >
                           <div
                             className="flex-shrink-0 w-5 h-5"
-                            style={{ color: isActive ? app.color : undefined }}
+                            style={{ color: isActive ? '#E27305' : app.color }}
                           >
                             {IconComponent && <IconComponent className="w-5 h-5" />}
                           </div>
@@ -110,14 +112,14 @@ export function Sidebar({ currentPath, onNavigate, isExpanded: controlledExpande
                           )}
 
                           {isActive && isExpanded && (
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#00E5FF]" />
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#E27305]" />
                           )}
                         </button>
                       </TooltipTrigger>
                       {!isExpanded && (
-                        <TooltipContent side="right" className="bg-[#172235] border-white/10">
-                          <p>{app.name}</p>
-                          <p className="text-xs text-[#A8B2C1]">{app.description}</p>
+                        <TooltipContent side="right" className="bg-[#33475B] border-[#33475B]/20">
+                          <p style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}>{app.name}</p>
+                          <p className="text-xs text-gray-300" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>{app.description}</p>
                         </TooltipContent>
                       )}
                     </Tooltip>
@@ -128,8 +130,8 @@ export function Sidebar({ currentPath, onNavigate, isExpanded: controlledExpande
           </nav>
 
           {/* Footer */}
-          <div className="p-4 border-t border-white/10">
-            <div className={`text-xs text-[#A8B2C1] ${isExpanded ? 'block' : 'hidden'}`}>
+          <div className="p-4 border-t border-[#33475B]/10">
+            <div className={`int-caption text-[#666666] ${isExpanded ? 'block' : 'hidden'}`}>
               <div>INT OS v2.5.0</div>
               <div className="mt-1 opacity-60">Build 2847</div>
             </div>
