@@ -11,25 +11,26 @@ interface ApplicationsGridProps {
 export function ApplicationsGrid({ onAppClick }: ApplicationsGridProps) {
   return (
     <section id="applications" className="relative py-24 px-4 sm:px-6 lg:px-8">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628] via-[#1A2F4D] to-[#0A1628]" />
+      {/* Background - INT Inc. brand gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#33475B] via-[#202D3A] to-[#33475B]" />
       
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <Badge className="mb-4 bg-[#E27305]/20 text-[#E27305] border-[#E27305]/50">
-            18 Integrated Applications
+        <div className="text-center mb-16 int-fade-in-up">
+          <Badge className="mb-4 bg-[#E27305]/20 text-[#E27305] border-[#E27305]/50"
+            style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}>
+            26 Integrated Applications
           </Badge>
-          <h2 className="mb-4 text-white">
-            One Platform, Endless Capabilities
+          <h2 className="int-h2 mb-4 text-white">
+            One Platform<span className="int-dot"></span> Endless Capabilities
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="int-body-lg text-gray-300 max-w-3xl mx-auto">
             Each application is purpose-built for specific operations needs, yet seamlessly 
             integrated with the entire INT OS ecosystem.
           </p>
         </div>
 
-        {/* Applications grid */}
+        {/* Applications grid - INT Inc. interactive cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {APPS.filter(app => app.id !== 'home').map((app) => {
             const IconComponent = app.icon;
@@ -45,7 +46,7 @@ export function ApplicationsGrid({ onAppClick }: ApplicationsGridProps) {
             return (
               <Card
                 key={app.id}
-                className={`bg-white/5 backdrop-blur-sm border-white/10 hover:border-white/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer ${
+                className={`int-card-interactive bg-[#F9FAFB] cursor-pointer ${
                   isMainApp ? 'lg:col-span-1' : ''
                 }`}
                 onClick={() => onAppClick?.(app.id)}
@@ -54,29 +55,27 @@ export function ApplicationsGrid({ onAppClick }: ApplicationsGridProps) {
                   {/* Icon and title */}
                   <div className="flex items-start justify-between mb-2">
                     <div
-                      className="w-12 h-12 rounded-lg flex items-center justify-center"
+                      className="w-12 h-12 rounded-lg flex items-center justify-center int-hover-scale"
                       style={{
-                        backgroundColor: `${app.color}20`,
-                        border: `1px solid ${app.color}40`
+                        background: `linear-gradient(135deg, ${app.color}, ${app.color}DD)`,
+                        boxShadow: `0 4px 12px ${app.color}30`
                       }}
                     >
-                      <IconComponent
-                        className="w-6 h-6"
-                        style={{ color: app.color }}
-                      />
+                      <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     {isMainApp && (
-                      <Badge className="bg-[#E27305]/20 text-[#E27305] border-[#E27305]/50 text-xs">
+                      <Badge className="bg-[#E27305]/20 text-[#E27305] border-[#E27305]/50 text-xs"
+                        style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}>
                         Featured
                       </Badge>
                     )}
                   </div>
-                  <h3 className="text-xl text-white">{app.name}</h3>
+                  <h3 className="int-h4 text-[#33475B]">{app.name}</h3>
                 </CardHeader>
                 
                 <CardContent>
                   {/* Description */}
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <p className="int-body text-[#666666] mb-4">
                     {getAppDescription(app.id)}
                   </p>
 
@@ -86,7 +85,8 @@ export function ApplicationsGrid({ onAppClick }: ApplicationsGridProps) {
                       <Badge
                         key={idx}
                         variant="outline"
-                        className="text-xs bg-white/5 border-white/20 text-gray-300"
+                        className="text-xs bg-[#33475B]/5 border-[#33475B]/20 text-[#33475B]"
+                        style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}
                       >
                         {feature}
                       </Badge>
@@ -96,7 +96,8 @@ export function ApplicationsGrid({ onAppClick }: ApplicationsGridProps) {
                   {/* CTA */}
                   <Button
                     variant="ghost"
-                    className="w-full text-[#529ADB] hover:text-[#6AAEE5] hover:bg-[#529ADB]/10"
+                    className="w-full text-[#529ADB] hover:text-[#67A6DF] hover:bg-[#529ADB]/10"
+                    style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}
                     onClick={(e) => {
                       e.stopPropagation();
                       onAppClick?.(app.id);
@@ -112,15 +113,12 @@ export function ApplicationsGrid({ onAppClick }: ApplicationsGridProps) {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <Button
-            size="lg"
-            className="bg-[#E27305] hover:bg-[#F08515] text-white shadow-lg"
-          >
+        <div className="text-center mt-16 int-fade-in-up">
+          <button className="int-btn-primary px-8 py-4 text-lg flex items-center gap-2 mx-auto">
             Start Your Free Trial
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-          <p className="text-sm text-gray-400 mt-4">
+            <ArrowRight className="w-5 h-5" />
+          </button>
+          <p className="int-caption text-gray-400 mt-4">
             No credit card required • 14-day free trial • Cancel anytime
           </p>
         </div>

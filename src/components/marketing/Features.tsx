@@ -92,50 +92,47 @@ const features = [
 export function Features() {
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-8">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628] via-[#0F1E33] to-[#0A1628]" />
+      {/* Background - INT Inc. Primary Blue gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#33475B] via-[#202D3A] to-[#33475B]" />
       
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="mb-4 text-white">
-            Everything You Need, Nothing You Don't
+        <div className="text-center mb-16 int-fade-in-up">
+          <h2 className="int-h2 mb-4 text-white">
+            Everything You Need<span className="int-dot"></span> Nothing You Don't
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="int-body-lg text-gray-300 max-w-3xl mx-auto">
             INT OS combines the best features from multiple tools into one unified platform,
             saving you time, money, and headaches.
           </p>
         </div>
 
-        {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Features grid - INT Inc. interactive cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 int-stagger-fade">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <Card
                 key={index}
-                className="bg-white/5 backdrop-blur-sm border-white/10 hover:border-white/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="int-card-interactive bg-[#F9FAFB]"
               >
                 <CardContent className="p-6">
-                  {/* Icon */}
+                  {/* Icon - INT Inc. brand gradient background */}
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-4"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 int-hover-scale"
                     style={{
-                      backgroundColor: `${feature.color}20`,
-                      border: `1px solid ${feature.color}40`
+                      background: `linear-gradient(135deg, ${feature.color}, ${feature.color}DD)`,
+                      boxShadow: `0 4px 12px ${feature.color}30`
                     }}
                   >
-                    <Icon
-                      className="w-7 h-7"
-                      style={{ color: feature.color }}
-                    />
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
 
-                  {/* Content */}
-                  <h3 className="text-xl mb-2 text-white">
+                  {/* Content - INT Inc. typography */}
+                  <h3 className="int-h4 mb-2 text-[#33475B]">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="int-body text-[#666666]">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -145,15 +142,15 @@ export function Features() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-400 mb-4">
+        <div className="text-center mt-16 int-fade-in-up">
+          <p className="int-body text-gray-300 mb-4">
             And that's just the beginning...
           </p>
           <a
             href="#applications"
-            className="text-[#529ADB] hover:text-[#6AAEE5] font-medium inline-flex items-center gap-2"
+            className="int-btn-secondary inline-flex items-center gap-2"
           >
-            Explore All 18 Applications
+            Explore All 26 Applications
             <Sparkles className="w-4 h-4" />
           </a>
         </div>
