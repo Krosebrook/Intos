@@ -171,10 +171,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden">
-      {/* Fixed Background with Particles */}
-      <div className="fixed inset-0 bg-gradient-to-b from-[#33475B] to-[#202D3A]" style={{ zIndex: -1 }} />
-      <ParticleField />
+    <div className="min-h-screen relative overflow-x-hidden bg-[#F9FAFB]">
+      {/* Subtle background pattern */}
+      <div className="fixed inset-0 bg-gradient-to-br from-[#FFFFFF] via-[#F9FAFB] to-[#E5F0F9] opacity-60" style={{ zIndex: -2 }} />
+      <div className="fixed inset-0 opacity-30" style={{ zIndex: -1, backgroundImage: 'radial-gradient(circle at 1px 1px, #33475B08 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
       {/* Top Navigation */}
       <TopNav
@@ -201,7 +201,7 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-[#33475B]/20 mt-12 py-6">
+        <footer className="border-t border-[#33475B]/10 mt-12 py-6 bg-white/50 backdrop-blur-sm">
           <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 int-body-sm text-[#999999]">
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6">
@@ -218,7 +218,7 @@ export default function App() {
                 </button>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <select className="bg-white/5 border border-[#33475B]/20 rounded px-3 py-1 text-[#666666] int-focus-ring" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
+                <select className="bg-white border border-[#33475B]/20 rounded px-3 py-1 text-[#666666] int-focus-ring" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
                   <option>English</option>
                   <option>Español</option>
                   <option>Français</option>
@@ -254,8 +254,8 @@ export default function App() {
         position="bottom-right"
         toastOptions={{
           style: {
-            background: '#F9FAFB',
-            border: '1px solid #33475B20',
+            background: '#FFFFFF',
+            border: '1px solid #33475B10',
             color: '#33475B',
             fontFamily: "'Roboto', system-ui, sans-serif",
           },
@@ -287,11 +287,11 @@ export default function App() {
       {isMobile && !isSidebarExpanded && (
         <button
           onClick={() => setIsSidebarExpanded(true)}
-          className="fixed bottom-6 left-6 w-12 h-12 bg-[#33475B] backdrop-blur-sm border border-[#33475B]/40 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-[#3D5266] transition-all"
+          className="fixed bottom-6 left-6 w-12 h-12 bg-white border-2 border-[#33475B]/20 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-[#F9FAFB] hover:border-[#33475B]/30 transition-all"
           aria-label="Open Menu"
         >
           <svg
-            className="w-6 h-6 text-white"
+            className="w-6 h-6 text-[#33475B]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
