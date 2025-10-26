@@ -3924,63 +3924,146 @@
 }
 
 :root {
-  --int-dark-blue: #33475b;
-  --int-orange: #e27305;
-  --int-green: #46a57b;
-  --int-medium-blue: #529adb;
-  --int-dark-grey: #333;
-  --int-light-grey: #ddd;
-  --int-bg: #1a2f4d;
-  --int-bg-end: #0f1e33;
-  --int-surface: #2a4365;
-  --int-surface-alt: #2d3e5f;
-  --int-card: #334e7a;
-  --int-text: #fff;
-  --int-subtext: #e2e8f0;
-  --int-muted: #cbd5e0;
-  --int-primary: #529adb;
-  --int-primary-hover: #6aaee5;
-  --int-primary-muted: #4287c4;
-  --int-secondary: #33475b;
-  --int-secondary-hover: #45596d;
-  --int-accent: #e27305;
-  --int-accent-hover: #f08515;
-  --int-purple: #6b5b95;
-  --int-yellow: #f5a623;
-  --success: #46a57b;
-  --success-bg: #46a57b30;
-  --warning: #f5a623;
-  --warning-bg: #f5a62330;
-  --error: #e85d75;
-  --error-bg: #e85d7530;
-  --info: #529adb;
-  --info-bg: #529adb30;
+  --int-primary-50: #85a0ba;
+  --int-primary-100: #6e8eae;
+  --int-primary-200: #537495;
+  --int-primary-300: #45607b;
+  --int-primary-400: #3c536b;
+  --int-primary-500: #33475b;
+  --int-primary-600: #293a4a;
+  --int-primary-700: #202d3a;
+  --int-primary-800: #121920;
+  --int-primary-900: #050709;
+  --int-secondary-50: #fccc9c;
+  --int-secondary-100: #fcba79;
+  --int-secondary-200: #faa047;
+  --int-secondary-300: #fa8c1f;
+  --int-secondary-400: #f97f06;
+  --int-secondary-500: #e27305;
+  --int-secondary-600: #c96604;
+  --int-secondary-700: #b05903;
+  --int-secondary-800: #884503;
+  --int-secondary-900: #653302;
+  --int-accent-50: #bbe2d1;
+  --int-accent-100: #a2d7bf;
+  --int-accent-200: #7ec8a7;
+  --int-accent-300: #61bc94;
+  --int-accent-400: #4fb488;
+  --int-accent-500: #46a57b;
+  --int-accent-600: #3e936d;
+  --int-accent-700: #368160;
+  --int-accent-800: #2a644a;
+  --int-accent-900: #204b38;
+  --int-support-50: #e5f0f9;
+  --int-support-100: #c8dff3;
+  --int-support-200: #9dc6ea;
+  --int-support-300: #7cb2e3;
+  --int-support-400: #67a6df;
+  --int-support-500: #529adb;
+  --int-support-600: #3c8dd6;
+  --int-support-700: #2b81ce;
+  --int-support-800: #246cad;
+  --int-support-900: #1d598f;
+  --int-bg-light: #fff;
+  --int-bg-dark: #33475b;
+  --int-surface: #f9fafb;
+  --int-surface-dark: #f2f6f9;
+  --int-surface-darker: #e5e7eb;
+  --int-text-primary: #333;
+  --int-text-secondary: #666;
+  --int-text-muted: #999;
+  --int-text-white: #fff;
+  --int-success-50: #ecfdf5;
+  --int-success-100: #d1fae5;
+  --int-success-200: #a7f3d0;
+  --int-success-300: #6ee7b7;
+  --int-success-400: #34d399;
+  --int-success-500: #10b981;
+  --int-success-600: #059669;
+  --int-success-700: #047857;
+  --int-success-800: #065f46;
+  --int-success-900: #064e3b;
+  --int-warning-50: #fffbeb;
+  --int-warning-100: #fef3c7;
+  --int-warning-200: #fde68a;
+  --int-warning-300: #fcd34d;
+  --int-warning-400: #fbbf24;
+  --int-warning-500: #f59e0b;
+  --int-warning-600: #d97706;
+  --int-warning-700: #b45309;
+  --int-warning-800: #92400e;
+  --int-warning-900: #78350f;
+  --int-error-50: #fef2f2;
+  --int-error-100: #fee2e2;
+  --int-error-200: #fecaca;
+  --int-error-300: #fca5a5;
+  --int-error-400: #f87171;
+  --int-error-500: #ef4444;
+  --int-error-600: #dc2626;
+  --int-error-700: #b91c1c;
+  --int-error-800: #991b1b;
+  --int-error-900: #7f1d1d;
+  --int-info-50: #eff6ff;
+  --int-info-100: #dbeafe;
+  --int-info-200: #bfdbfe;
+  --int-info-300: #93c5fd;
+  --int-info-400: #60a5fa;
+  --int-info-500: #3b82f6;
+  --int-info-600: #2563eb;
+  --int-info-700: #1d4ed8;
+  --int-info-800: #1e40af;
+  --int-info-900: #1e3a8a;
+  --int-space-1: .25rem;
+  --int-space-2: .5rem;
+  --int-space-3: .75rem;
+  --int-space-4: 1rem;
+  --int-space-6: 1.5rem;
+  --int-space-8: 2rem;
+  --int-space-12: 3rem;
+  --int-space-16: 4rem;
+  --int-space-24: 6rem;
+  --int-space-32: 8rem;
+  --int-radius-sm: .375rem;
+  --int-radius: .75rem;
+  --int-radius-lg: 1rem;
+  --int-radius-xl: 1.25rem;
+  --int-radius-2xl: 1.5rem;
+  --int-radius-full: 9999px;
+  --int-shadow-sm: 0 1px 2px #0000000d;
+  --int-shadow: 0 4px 12px #00000026;
+  --int-shadow-md: 0 4px 6px -1px #0000001a;
+  --int-shadow-lg: 0 8px 24px #00000040;
+  --int-shadow-xl: 0 20px 25px -5px #0000001a;
+  --int-shadow-2xl: 0 25px 50px -12px #00000040;
+  --int-glow-primary: 0 0 20px #e2730580;
+  --int-glow-support: 0 0 20px #529adb66;
+  --int-glow-accent: 0 0 20px #46a57b66;
+  --int-glow-success: 0 0 20px #10b98166;
+  --int-text-xs: clamp(.75rem, .7rem + .25vw, .875rem);
+  --int-text-sm: clamp(.875rem, .8rem + .375vw, 1rem);
+  --int-text-base: clamp(1rem, .9rem + .5vw, 1.125rem);
+  --int-text-lg: clamp(1.125rem, 1rem + .625vw, 1.25rem);
+  --int-text-xl: clamp(1.25rem, 1.1rem + .75vw, 1.5rem);
+  --int-text-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+  --int-text-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+  --int-text-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+  --int-text-5xl: clamp(3rem, 2.5rem + 2.5vw, 3.75rem);
+  --int-text-6xl: clamp(3.75rem, 3rem + 3.75vw, 4.5rem);
+  --int-leading-none: 1;
+  --int-leading-tight: 1.25;
+  --int-leading-snug: 1.375;
+  --int-leading-normal: 1.5;
+  --int-leading-relaxed: 1.625;
+  --int-leading-loose: 2;
+  --int-tracking-tight: -.025em;
+  --int-tracking-normal: 0em;
+  --int-tracking-wide: .025em;
+  --int-animation-ease: cubic-bezier(.4, 0, .2, 1);
+  --int-animation-ease-in: cubic-bezier(.4, 0, 1, 1);
+  --int-animation-ease-out: cubic-bezier(0, 0, .2, 1);
+  --int-animation-ease-bounce: cubic-bezier(.68, -.55, .265, 1.55);
   --hover-lift: 2px;
-  --focus-ring: #529adb;
-  --border-default: #dddddd26;
-  --border-hover: #529adb80;
-  --border-active: #e27305cc;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-12: 48px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --shadow-sm: 0 1px 3px #0006;
-  --shadow-md: 0 4px 12px #00000080;
-  --shadow-lg: 0 8px 24px #0009;
-  --shadow-glow: 0 0 30px #00e5ff4d;
-  --duration-fast: .18s;
-  --duration-base: .28s;
-  --duration-slow: .4s;
-  --ease-primary: cubic-bezier(.42, 0, .58, 1);
-  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "Sora", var(--font-ui);
+  --focus-ring: var(--int-secondary-500);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4174,6 +4257,277 @@ small {
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
+}
+
+@keyframes intFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.int-fade-in-up {
+  animation: intFadeInUp .6s var(--int-animation-ease) forwards;
+}
+
+@keyframes intScalePop {
+  0% {
+    opacity: 0;
+    transform: scale(.9);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.int-scale-pop {
+  animation: intScalePop .4s var(--int-animation-ease) forwards;
+}
+
+@keyframes intPulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 #e27305b3;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px #e2730500;
+  }
+}
+
+.int-pulse-glow {
+  animation: 2s ease-in-out infinite intPulseGlow;
+}
+
+.int-hover-glow:hover {
+  box-shadow: var(--int-glow-primary);
+  transition: all .3s;
+}
+
+.int-hover-lift:hover {
+  box-shadow: var(--int-shadow-lg);
+  transition: all .3s;
+  transform: translateY(-4px);
+}
+
+.int-hover-scale:hover {
+  transition: transform .3s;
+  transform: scale(1.05);
+}
+
+.int-stagger-fade > * {
+  opacity: 0;
+  animation: intFadeInUp .6s var(--int-animation-ease) forwards;
+}
+
+.int-stagger-fade > :first-child {
+  animation-delay: 0s;
+}
+
+.int-stagger-fade > :nth-child(2) {
+  animation-delay: .1s;
+}
+
+.int-stagger-fade > :nth-child(3) {
+  animation-delay: .2s;
+}
+
+.int-stagger-fade > :nth-child(4) {
+  animation-delay: .3s;
+}
+
+.int-stagger-fade > :nth-child(5) {
+  animation-delay: .4s;
+}
+
+.int-stagger-fade > :nth-child(6) {
+  animation-delay: .5s;
+}
+
+.int-btn-primary {
+  background: linear-gradient(to right, var(--int-secondary-400), var(--int-secondary-500));
+  color: #fff;
+  border-radius: var(--int-radius-xl);
+  box-shadow: var(--int-shadow-md);
+  letter-spacing: var(--int-tracking-wide);
+  padding: .75rem 1.5rem;
+  font-family: Rubik, system-ui, sans-serif;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.int-btn-primary:hover {
+  box-shadow: var(--int-glow-primary);
+  transform: translateY(-2px);
+}
+
+.int-btn-secondary {
+  background: linear-gradient(to right, var(--int-support-400), var(--int-support-500));
+  color: #fff;
+  border-radius: var(--int-radius-xl);
+  letter-spacing: var(--int-tracking-wide);
+  padding: .75rem 1.5rem;
+  font-family: Rubik, system-ui, sans-serif;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.int-btn-secondary:hover {
+  box-shadow: var(--int-glow-support);
+}
+
+.int-btn-accent {
+  background: linear-gradient(to right, var(--int-accent-300), var(--int-accent-500));
+  color: #fff;
+  border-radius: var(--int-radius-xl);
+  letter-spacing: var(--int-tracking-wide);
+  padding: .75rem 1.5rem;
+  font-family: Rubik, system-ui, sans-serif;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.int-btn-accent:hover {
+  box-shadow: var(--int-glow-accent);
+}
+
+.int-card-interactive {
+  background: var(--int-surface);
+  border-radius: var(--int-radius-2xl);
+  padding: var(--int-space-6);
+  transition: all .3s var(--int-animation-ease);
+  border: 1px solid #33475b1a;
+}
+
+.int-card-interactive:hover {
+  border-color: var(--int-secondary-500);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px #0000001a;
+}
+
+.int-text-gradient {
+  background: linear-gradient(135deg, var(--int-secondary-500) 0%, var(--int-support-500) 50%, var(--int-accent-500) 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.int-focus-ring:focus {
+  border-color: var(--int-secondary-500);
+  outline: none;
+  box-shadow: 0 0 0 3px #e273054d;
+}
+
+.int-hero-h1 {
+  font-family: Rubik, system-ui, sans-serif;
+  font-size: var(--int-text-6xl);
+  font-weight: 800;
+  line-height: var(--int-leading-tight);
+}
+
+.int-h1 {
+  font-family: Rubik, system-ui, sans-serif;
+  font-size: var(--int-text-5xl);
+  font-weight: 700;
+  line-height: var(--int-leading-tight);
+}
+
+.int-h2 {
+  font-family: Rubik, system-ui, sans-serif;
+  font-size: var(--int-text-4xl);
+  font-weight: 700;
+  line-height: var(--int-leading-tight);
+}
+
+.int-h3 {
+  font-family: Rubik, system-ui, sans-serif;
+  font-size: var(--int-text-3xl);
+  font-weight: 600;
+  line-height: var(--int-leading-snug);
+}
+
+.int-h4 {
+  font-family: Rubik, system-ui, sans-serif;
+  font-size: var(--int-text-2xl);
+  font-weight: 600;
+  line-height: var(--int-leading-snug);
+}
+
+.int-body-lg {
+  font-family: Roboto, system-ui, sans-serif;
+  font-size: var(--int-text-lg);
+  font-weight: 400;
+  line-height: var(--int-leading-relaxed);
+}
+
+.int-body {
+  font-family: Roboto, system-ui, sans-serif;
+  font-size: var(--int-text-base);
+  font-weight: 400;
+  line-height: var(--int-leading-relaxed);
+}
+
+.int-body-sm {
+  font-family: Roboto, system-ui, sans-serif;
+  font-size: var(--int-text-sm);
+  font-weight: 400;
+  line-height: var(--int-leading-normal);
+}
+
+.int-caption {
+  font-family: Roboto, system-ui, sans-serif;
+  font-size: var(--int-text-xs);
+  font-weight: 400;
+  line-height: var(--int-leading-normal);
+}
+
+.int-dot {
+  background: var(--int-secondary-500);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.int-dot-lg {
+  background: var(--int-secondary-500);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.int-badge-success {
+  color: var(--int-success-500);
+  padding: var(--int-space-1) var(--int-space-3);
+  border-radius: var(--int-radius-full);
+  font-family: Rubik, system-ui, sans-serif;
+  font-size: var(--int-text-xs);
+  background: #10b98133;
+  border: 1px solid #10b9814d;
+  font-weight: 600;
+}
+
+.int-badge-premium {
+  background: linear-gradient(to right, var(--int-accent-500), var(--int-secondary-500));
+  color: #fff;
+  padding: var(--int-space-1) var(--int-space-3);
+  border-radius: var(--int-radius-full);
+  font-family: Rubik, system-ui, sans-serif;
+  font-size: var(--int-text-xs);
+  font-weight: 700;
 }
 
 @property --tw-translate-x {

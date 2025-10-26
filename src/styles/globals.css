@@ -1,89 +1,208 @@
 @import "tailwindcss";
 
-/* INT OS Design Tokens */
+/* INT Inc. Brand Design Tokens - Official Brand Kit v1.0.0 */
+/* Based on intinc.com brand guidelines */
+
 :root {
-  /* Official INT Inc. Brand Colors - intinc.com */
-  --int-dark-blue: #33475B;      /* Dark blue - links, secondary elements */
-  --int-orange: #E27305;         /* Orange - CTA buttons, primary actions */
-  --int-green: #46A57B;          /* Green - success states, positive metrics */
-  --int-medium-blue: #529ADB;    /* Medium blue - primary highlights, dividers */
-  --int-dark-grey: #333333;      /* Dark grey - text, footer */
-  --int-light-grey: #DDDDDD;     /* Light grey - borders, dividers */
+  /* ===========================
+     INT Inc. Primary Colors
+     =========================== */
   
-  /* Background Colors - Dark navy gradient maintained */
-  --int-bg: #1A2F4D;
-  --int-bg-end: #0F1E33;
-  --int-surface: #2A4365;
-  --int-surface-alt: #2D3E5F;
-  --int-card: #334E7A;
-  --int-text: #FFFFFF;
-  --int-subtext: #E2E8F0;
-  --int-muted: #CBD5E0;
+  /* Primary Blue - Main Brand Color */
+  --int-primary-50:  #85A0BA;
+  --int-primary-100: #6E8EAE;
+  --int-primary-200: #537495;
+  --int-primary-300: #45607B;
+  --int-primary-400: #3C536B;
+  --int-primary-500: #33475B;  /* ★ MAIN BRAND COLOR */
+  --int-primary-600: #293A4A;
+  --int-primary-700: #202D3A;
+  --int-primary-800: #121920;
+  --int-primary-900: #050709;
+
+  /* Secondary Orange - Call-to-Action */
+  --int-secondary-50:  #FCCC9C;
+  --int-secondary-100: #FCBA79;
+  --int-secondary-200: #FAA047;
+  --int-secondary-300: #FA8C1F;
+  --int-secondary-400: #F97F06;
+  --int-secondary-500: #E27305;  /* ★ MAIN CTA COLOR */
+  --int-secondary-600: #C96604;
+  --int-secondary-700: #B05903;
+  --int-secondary-800: #884503;
+  --int-secondary-900: #653302;
+
+  /* Accent Green - Success & Highlights */
+  --int-accent-50:  #BBE2D1;
+  --int-accent-100: #A2D7BF;
+  --int-accent-200: #7EC8A7;
+  --int-accent-300: #61BC94;
+  --int-accent-400: #4FB488;
+  --int-accent-500: #46A57B;  /* ★ MAIN ACCENT */
+  --int-accent-600: #3E936D;
+  --int-accent-700: #368160;
+  --int-accent-800: #2A644A;
+  --int-accent-900: #204B38;
+
+  /* Support Blue - Links & Dividers */
+  --int-support-50:  #E5F0F9;
+  --int-support-100: #C8DFF3;
+  --int-support-200: #9DC6EA;
+  --int-support-300: #7CB2E3;
+  --int-support-400: #67A6DF;
+  --int-support-500: #529ADB;  /* ★ SUPPORT COLOR */
+  --int-support-600: #3C8DD6;
+  --int-support-700: #2B81CE;
+  --int-support-800: #246CAD;
+  --int-support-900: #1D598F;
+
+  /* ===========================
+     Background System
+     =========================== */
+  --int-bg-light:       #FFFFFF;
+  --int-bg-dark:        #33475B;  /* Primary Blue */
+  --int-surface:        #F9FAFB;
+  --int-surface-dark:   #F2F6F9;
+  --int-surface-darker: #E5E7EB;
+
+  /* ===========================
+     Text Colors
+     =========================== */
+  --int-text-primary:   #333333;
+  --int-text-secondary: #666666;
+  --int-text-muted:     #999999;
+  --int-text-white:     #FFFFFF;
+
+  /* ===========================
+     Semantic Colors
+     =========================== */
   
-  /* Primary Brand Colors - Using INT Inc. palette */
-  --int-primary: #529ADB;        /* Medium blue for primary actions */
-  --int-primary-hover: #6AAEE5;
-  --int-primary-muted: #4287C4;
-  
-  /* Secondary Colors - Dark blue */
-  --int-secondary: #33475B;
-  --int-secondary-hover: #45596D;
-  
-  /* Accent Colors - INT Inc. brand palette */
-  --int-accent: #E27305;         /* Orange for CTAs */
-  --int-accent-hover: #F08515;
-  --int-purple: #6B5B95;         /* Adjusted purple to complement brand */
-  --int-yellow: #F5A623;         /* Warm amber to complement orange */
-  
-  /* Semantic States - Using brand green + complementary colors */
-  --success: #46A57B;            /* INT Inc. green */
-  --success-bg: #46A57B30;
-  --warning: #F5A623;
-  --warning-bg: #F5A62330;
-  --error: #E85D75;
-  --error-bg: #E85D7530;
-  --info: #529ADB;               /* INT Inc. medium blue */
-  --info-bg: #529ADB30;
-  
+  /* Success (Green) */
+  --int-success-50:  #ECFDF5;
+  --int-success-100: #D1FAE5;
+  --int-success-200: #A7F3D0;
+  --int-success-300: #6EE7B7;
+  --int-success-400: #34D399;
+  --int-success-500: #10B981;
+  --int-success-600: #059669;
+  --int-success-700: #047857;
+  --int-success-800: #065F46;
+  --int-success-900: #064E3B;
+
+  /* Warning (Amber) */
+  --int-warning-50:  #FFFBEB;
+  --int-warning-100: #FEF3C7;
+  --int-warning-200: #FDE68A;
+  --int-warning-300: #FCD34D;
+  --int-warning-400: #FBBF24;
+  --int-warning-500: #F59E0B;
+  --int-warning-600: #D97706;
+  --int-warning-700: #B45309;
+  --int-warning-800: #92400E;
+  --int-warning-900: #78350F;
+
+  /* Error (Red) */
+  --int-error-50:  #FEF2F2;
+  --int-error-100: #FEE2E2;
+  --int-error-200: #FECACA;
+  --int-error-300: #FCA5A5;
+  --int-error-400: #F87171;
+  --int-error-500: #EF4444;
+  --int-error-600: #DC2626;
+  --int-error-700: #B91C1C;
+  --int-error-800: #991B1B;
+  --int-error-900: #7F1D1D;
+
+  /* Info (Blue) */
+  --int-info-50:  #EFF6FF;
+  --int-info-100: #DBEAFE;
+  --int-info-200: #BFDBFE;
+  --int-info-300: #93C5FD;
+  --int-info-400: #60A5FA;
+  --int-info-500: #3B82F6;
+  --int-info-600: #2563EB;
+  --int-info-700: #1D4ED8;
+  --int-info-800: #1E40AF;
+  --int-info-900: #1E3A8A;
+
+  /* ===========================
+     Spacing System (4px grid)
+     =========================== */
+  --int-space-1:  0.25rem;  /* 4px */
+  --int-space-2:  0.5rem;   /* 8px */
+  --int-space-3:  0.75rem;  /* 12px */
+  --int-space-4:  1rem;     /* 16px */
+  --int-space-6:  1.5rem;   /* 24px */
+  --int-space-8:  2rem;     /* 32px */
+  --int-space-12: 3rem;     /* 48px */
+  --int-space-16: 4rem;     /* 64px */
+  --int-space-24: 6rem;     /* 96px */
+  --int-space-32: 8rem;     /* 128px */
+
+  /* ===========================
+     Border Radius
+     =========================== */
+  --int-radius-sm:   0.375rem;  /* 6px */
+  --int-radius:      0.75rem;   /* 12px */
+  --int-radius-lg:   1rem;      /* 16px */
+  --int-radius-xl:   1.25rem;   /* 20px */
+  --int-radius-2xl:  1.5rem;    /* 24px */
+  --int-radius-full: 9999px;
+
+  /* ===========================
+     Shadows & Depth
+     =========================== */
+  --int-shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.05);
+  --int-shadow:     0 4px 12px rgba(0, 0, 0, 0.15);
+  --int-shadow-md:  0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --int-shadow-lg:  0 8px 24px rgba(0, 0, 0, 0.25);
+  --int-shadow-xl:  0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --int-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* Glow Effects */
+  --int-glow-primary:   0 0 20px rgba(226, 115, 5, 0.5);   /* Orange */
+  --int-glow-support:   0 0 20px rgba(82, 154, 219, 0.4);  /* Blue */
+  --int-glow-accent:    0 0 20px rgba(70, 165, 123, 0.4);  /* Green */
+  --int-glow-success:   0 0 20px rgba(16, 185, 129, 0.4);
+
+  /* ===========================
+     Typography Scale (Fluid)
+     =========================== */
+  --int-text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);   /* 12px → 14px */
+  --int-text-sm:   clamp(0.875rem, 0.8rem + 0.375vw, 1rem);     /* 14px → 16px */
+  --int-text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);       /* 16px → 18px */
+  --int-text-lg:   clamp(1.125rem, 1rem + 0.625vw, 1.25rem);    /* 18px → 20px */
+  --int-text-xl:   clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);     /* 20px → 24px */
+  --int-text-2xl:  clamp(1.5rem, 1.3rem + 1vw, 1.875rem);       /* 24px → 30px */
+  --int-text-3xl:  clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);  /* 30px → 36px */
+  --int-text-4xl:  clamp(2.25rem, 1.9rem + 1.75vw, 3rem);       /* 36px → 48px */
+  --int-text-5xl:  clamp(3rem, 2.5rem + 2.5vw, 3.75rem);        /* 48px → 60px */
+  --int-text-6xl:  clamp(3.75rem, 3rem + 3.75vw, 4.5rem);       /* 60px → 72px */
+
+  /* Line Heights */
+  --int-leading-none:    1;
+  --int-leading-tight:   1.25;
+  --int-leading-snug:    1.375;
+  --int-leading-normal:  1.5;
+  --int-leading-relaxed: 1.625;
+  --int-leading-loose:   2;
+
+  /* Letter Spacing */
+  --int-tracking-tight:  -0.025em;
+  --int-tracking-normal:  0em;
+  --int-tracking-wide:    0.025em;
+
+  /* ===========================
+     Animation System
+     =========================== */
+  --int-animation-ease:        cubic-bezier(0.4, 0, 0.2, 1);
+  --int-animation-ease-in:     cubic-bezier(0.4, 0, 1, 1);
+  --int-animation-ease-out:    cubic-bezier(0, 0, 0.2, 1);
+  --int-animation-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
   /* Interactive States */
   --hover-lift: 2px;
-  --focus-ring: #529ADB;         /* Medium blue for focus states */
-  
-  /* Border Colors - Using brand colors */
-  --border-default: rgba(221, 221, 221, 0.15);      /* Light grey with transparency */
-  --border-hover: rgba(82, 154, 219, 0.5);          /* Medium blue on hover */
-  --border-active: rgba(226, 115, 5, 0.8);          /* Orange on active */
-  
-  /* Spacing Scale */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-12: 48px;
-  
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  
-  /* Elevation - Enhanced shadows with glow */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 30px rgba(0, 229, 255, 0.3);
-  
-  /* Motion */
-  --duration-fast: 180ms;
-  --duration-base: 280ms;
-  --duration-slow: 400ms;
-  --ease-primary: cubic-bezier(0.42, 0, 0.58, 1);
-  
-  /* Typography */
-  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: 'Sora', var(--font-ui);
+  --focus-ring: var(--int-secondary-500);  /* Orange focus */
 }
 
 /* Reduced Motion Support */
@@ -290,4 +409,277 @@ small {
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
+}
+
+/* ===========================
+   INT Inc. Brand Animations
+   =========================== */
+
+/* Fade In Up */
+@keyframes intFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.int-fade-in-up {
+  animation: intFadeInUp 600ms var(--int-animation-ease) forwards;
+}
+
+/* Scale Pop */
+@keyframes intScalePop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.int-scale-pop {
+  animation: intScalePop 400ms var(--int-animation-ease) forwards;
+}
+
+/* Pulse Glow */
+@keyframes intPulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(226, 115, 5, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(226, 115, 5, 0);
+  }
+}
+
+.int-pulse-glow {
+  animation: intPulseGlow 2s ease-in-out infinite;
+}
+
+/* Hover Effects */
+.int-hover-glow:hover {
+  box-shadow: var(--int-glow-primary);
+  transition: all 300ms ease;
+}
+
+.int-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--int-shadow-lg);
+  transition: all 300ms ease;
+}
+
+.int-hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 300ms ease;
+}
+
+/* Staggered Animations */
+.int-stagger-fade > * {
+  opacity: 0;
+  animation: intFadeInUp 600ms var(--int-animation-ease) forwards;
+}
+
+.int-stagger-fade > *:nth-child(1) { animation-delay: 0ms; }
+.int-stagger-fade > *:nth-child(2) { animation-delay: 100ms; }
+.int-stagger-fade > *:nth-child(3) { animation-delay: 200ms; }
+.int-stagger-fade > *:nth-child(4) { animation-delay: 300ms; }
+.int-stagger-fade > *:nth-child(5) { animation-delay: 400ms; }
+.int-stagger-fade > *:nth-child(6) { animation-delay: 500ms; }
+
+/* ===========================
+   INT Inc. Component Classes
+   =========================== */
+
+/* Primary Button */
+.int-btn-primary {
+  font-family: 'Rubik', system-ui, sans-serif;
+  background: linear-gradient(to right, var(--int-secondary-400), var(--int-secondary-500));
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--int-radius-xl);
+  box-shadow: var(--int-shadow-md);
+  transition: all 300ms ease;
+  letter-spacing: var(--int-tracking-wide);
+}
+
+.int-btn-primary:hover {
+  box-shadow: var(--int-glow-primary);
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.int-btn-secondary {
+  font-family: 'Rubik', system-ui, sans-serif;
+  background: linear-gradient(to right, var(--int-support-400), var(--int-support-500));
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--int-radius-xl);
+  transition: all 300ms ease;
+  letter-spacing: var(--int-tracking-wide);
+}
+
+.int-btn-secondary:hover {
+  box-shadow: var(--int-glow-support);
+}
+
+/* Accent Button */
+.int-btn-accent {
+  font-family: 'Rubik', system-ui, sans-serif;
+  background: linear-gradient(to right, var(--int-accent-300), var(--int-accent-500));
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--int-radius-xl);
+  transition: all 300ms ease;
+  letter-spacing: var(--int-tracking-wide);
+}
+
+.int-btn-accent:hover {
+  box-shadow: var(--int-glow-accent);
+}
+
+/* Interactive Card */
+.int-card-interactive {
+  background: var(--int-surface);
+  border: 1px solid rgba(51, 71, 91, 0.1);
+  border-radius: var(--int-radius-2xl);
+  padding: var(--int-space-6);
+  transition: all 300ms var(--int-animation-ease);
+}
+
+.int-card-interactive:hover {
+  border-color: var(--int-secondary-500);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Gradient (for headlines) */
+.int-text-gradient {
+  background: linear-gradient(135deg, var(--int-secondary-500) 0%, var(--int-support-500) 50%, var(--int-accent-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Focus Ring */
+.int-focus-ring:focus {
+  outline: none;
+  border-color: var(--int-secondary-500);
+  box-shadow: 0 0 0 3px rgba(226, 115, 5, 0.3);
+}
+
+/* Typography Classes */
+.int-hero-h1 {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: var(--int-text-6xl);
+  font-weight: 800;
+  line-height: var(--int-leading-tight);
+}
+
+.int-h1 {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: var(--int-text-5xl);
+  font-weight: 700;
+  line-height: var(--int-leading-tight);
+}
+
+.int-h2 {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: var(--int-text-4xl);
+  font-weight: 700;
+  line-height: var(--int-leading-tight);
+}
+
+.int-h3 {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: var(--int-text-3xl);
+  font-weight: 600;
+  line-height: var(--int-leading-snug);
+}
+
+.int-h4 {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: var(--int-text-2xl);
+  font-weight: 600;
+  line-height: var(--int-leading-snug);
+}
+
+.int-body-lg {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: var(--int-text-lg);
+  font-weight: 400;
+  line-height: var(--int-leading-relaxed);
+}
+
+.int-body {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: var(--int-text-base);
+  font-weight: 400;
+  line-height: var(--int-leading-relaxed);
+}
+
+.int-body-sm {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: var(--int-text-sm);
+  font-weight: 400;
+  line-height: var(--int-leading-normal);
+}
+
+.int-caption {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: var(--int-text-xs);
+  font-weight: 400;
+  line-height: var(--int-leading-normal);
+}
+
+/* The Dot - INT Inc. Brand Element */
+.int-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--int-secondary-500);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.int-dot-lg {
+  width: 24px;
+  height: 24px;
+  background: var(--int-secondary-500);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Badge Styles */
+.int-badge-success {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--int-success-500);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: var(--int-space-1) var(--int-space-3);
+  border-radius: var(--int-radius-full);
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: var(--int-text-xs);
+  font-weight: 600;
+}
+
+.int-badge-premium {
+  background: linear-gradient(to right, var(--int-accent-500), var(--int-secondary-500));
+  color: white;
+  padding: var(--int-space-1) var(--int-space-3);
+  border-radius: var(--int-radius-full);
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: var(--int-text-xs);
+  font-weight: 700;
 }
