@@ -9,6 +9,9 @@ import { LandingPage } from './components/int-os/LandingPage';
 import { Toaster } from './components/ui/sonner';
 import { APPS } from './lib/constants';
 
+// Background image import
+import backgroundImage from 'figma:asset/218c0e5250419e02190c065fae4907c6d7e6f64f.png';
+
 // App imports
 import { InsightHub } from './components/apps/InsightHub';
 import { ResolveDesk } from './components/apps/ResolveDesk';
@@ -171,10 +174,21 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden bg-[#F9FAFB]">
-      {/* Subtle background pattern */}
-      <div className="fixed inset-0 bg-gradient-to-br from-[#FFFFFF] via-[#F9FAFB] to-[#E5F0F9] opacity-60" style={{ zIndex: -2 }} />
-      <div className="fixed inset-0 opacity-30" style={{ zIndex: -1, backgroundImage: 'radial-gradient(circle at 1px 1px, #33475B08 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+    <div className="min-h-screen relative overflow-x-hidden">
+      {/* Fixed background image - stays in place while content scrolls */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${backgroundImage})`,
+          zIndex: -2
+        }} 
+      />
+      
+      {/* Overlay for better text readability */}
+      <div 
+        className="fixed inset-0 bg-gradient-to-b from-[#33475B]/40 via-[#33475B]/20 to-[#33475B]/60"
+        style={{ zIndex: -1 }} 
+      />
 
       {/* Top Navigation */}
       <TopNav
@@ -201,16 +215,16 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-[#33475B]/10 mt-12 py-6 bg-white/50 backdrop-blur-sm">
+        <footer className="border-t border-white/20 mt-12 py-6 bg-[#33475B]/80 backdrop-blur-md">
           <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 int-body-sm text-[#999999]">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 int-body-sm text-white/80">
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6">
                 <span style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>© 2025 INT OS v2.5.0</span>
-                <button className="hover:text-[#529ADB] transition-colors" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
+                <button className="hover:text-[#E27305] transition-colors" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
                   Feedback
                 </button>
                 <button 
-                  className="hover:text-[#529ADB] transition-colors"
+                  className="hover:text-[#E27305] transition-colors"
                   onClick={() => setIsAssistantOpen(!isAssistantOpen)}
                   style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}
                 >
@@ -218,13 +232,13 @@ export default function App() {
                 </button>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <select className="bg-white border border-[#33475B]/20 rounded px-3 py-1 text-[#666666] int-focus-ring" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
-                  <option>English</option>
-                  <option>Español</option>
-                  <option>Français</option>
-                  <option>العربية</option>
+                <select className="bg-white/10 border border-white/30 rounded px-3 py-1 text-white backdrop-blur-sm int-focus-ring" style={{ fontFamily: "'Roboto', system-ui, sans-serif" }}>
+                  <option className="bg-[#33475B] text-white">English</option>
+                  <option className="bg-[#33475B] text-white">Español</option>
+                  <option className="bg-[#33475B] text-white">Français</option>
+                  <option className="bg-[#33475B] text-white">العربية</option>
                 </select>
-                <button className="text-[#529ADB] hover:text-[#67A6DF] transition-colors" style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}>
+                <button className="text-[#E27305] hover:text-[#F08515] transition-colors" style={{ fontFamily: "'Rubik', system-ui, sans-serif", fontWeight: 600 }}>
                   Documentation →
                 </button>
               </div>
@@ -254,9 +268,10 @@ export default function App() {
         position="bottom-right"
         toastOptions={{
           style: {
-            background: '#FFFFFF',
-            border: '1px solid #33475B10',
-            color: '#33475B',
+            background: 'rgba(51, 71, 91, 0.95)',
+            backdropFilter: 'blur(12px)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            color: '#FFFFFF',
             fontFamily: "'Roboto', system-ui, sans-serif",
           },
         }}
@@ -287,7 +302,7 @@ export default function App() {
       {isMobile && !isSidebarExpanded && (
         <button
           onClick={() => setIsSidebarExpanded(true)}
-          className="fixed bottom-6 left-6 w-12 h-12 bg-white border-2 border-[#33475B]/20 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-[#F9FAFB] hover:border-[#33475B]/30 transition-all"
+          className="fixed bottom-6 left-6 w-12 h-12 bg-white/90 backdrop-blur-sm border-2 border-[#33475B]/20 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-white hover:border-[#E27305]/30 transition-all"
           aria-label="Open Menu"
         >
           <svg
