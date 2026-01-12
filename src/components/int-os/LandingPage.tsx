@@ -18,7 +18,9 @@ import {
   Layers,
   Command,
 } from 'lucide-react';
+import * as Icons from 'lucide-react';
 import { ParticleField } from './ParticleField';
+import { APPS } from '../../lib/constants';
 
 interface LandingPageProps {
   onEnterApp: () => void;
@@ -105,18 +107,10 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: '18 Integrated Apps',
+      title: '26 Integrated Apps',
       description: 'Complete suite for support, analytics, learning, and operations',
       color: '#6B9FFF',
     },
-  ];
-
-  const apps = [
-    'InsightHub', 'ResolveDesk', 'ConnectDesk', 'FlowForge',
-    'SentimentScope', 'AlertOps', 'SyncBotPanel', 'AcademyPortal',
-    'PulseBoard', 'BrainDock', 'TriageLens', 'StrategyBoard',
-    'FeedbackLoop', 'PulseChat', 'CommandView', 'AssuranceBoard',
-    'PartnerHub', 'INT_Studio'
   ];
 
   return (
@@ -142,7 +136,7 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
               </span>
             </h1>
             <p className="text-base sm:text-xl text-[#E2E8F0] max-w-2xl mx-auto mb-8 sm:mb-12 px-4">
-              18 AI-powered apps for support, analytics, automation, and team management.
+              26 AI-powered apps for support, analytics, automation, and team management.
               Built for HubSpot, Freshdesk, and Teams integrations.
             </p>
 
@@ -253,22 +247,31 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           {/* Apps Overview */}
           <div className="mb-12 sm:mb-20">
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl mb-4">18 Integrated Applications</h2>
+              <h2 className="text-2xl sm:text-3xl mb-4">26 Integrated Applications</h2>
               <p className="text-sm sm:text-base text-[#A8B2C1] max-w-2xl mx-auto px-4">
                 Complete suite covering analytics, support, automation, learning, and team operations
               </p>
             </div>
             <Card className="p-6 sm:p-8 card-gradient border-white/10">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-                {apps.map((app, i) => (
-                  <div
-                    key={i}
-                    className="p-3 sm:p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all cursor-pointer text-center"
-                  >
-                    <Layers className="w-5 h-5 sm:w-6 sm:h-6 text-[#0097A9] mx-auto mb-2" />
-                    <p className="text-xs sm:text-sm">{app}</p>
-                  </div>
-                ))}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
+                {APPS.map((app) => {
+                  const Icon = (Icons as any)[app.icon] || Layers;
+                  return (
+                    <div
+                      key={app.id}
+                      className="p-3 sm:p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all cursor-pointer text-center group hover:scale-105"
+                      onClick={onEnterApp}
+                    >
+                      <Icon 
+                        className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-3 transition-colors" 
+                        style={{ color: app.color }}
+                      />
+                      <p className="text-xs sm:text-sm font-medium text-[#E2E8F0] group-hover:text-white truncate">
+                        {app.name}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </Card>
           </div>

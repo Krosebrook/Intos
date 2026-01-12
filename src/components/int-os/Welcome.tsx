@@ -76,7 +76,7 @@ export function Welcome({ onDismiss }: WelcomeProps) {
             <div className="w-10 h-10 rounded-full bg-[#40B4E5]/20 flex items-center justify-center mb-3">
               <Globe className="w-5 h-5 text-[#40B4E5]" />
             </div>
-            <h3 className="font-medium mb-2">18 Integrated Apps</h3>
+            <h3 className="font-medium mb-2">26 Integrated Apps</h3>
             <p className="text-sm text-[#A8B2C1]">
               From analytics to support, from automation to sentiment analysis—everything 
               you need in one unified platform.

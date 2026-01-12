@@ -33,7 +33,7 @@ export function CommandPalette({ isOpen, onClose, onNavigate }: CommandPalettePr
         onNavigate(app.path);
         onClose();
       },
-      category: 'Navigation',
+      category: (app as any).category || 'Navigation',
       keywords: [app.name.toLowerCase(), app.description.toLowerCase()],
     })),
     {

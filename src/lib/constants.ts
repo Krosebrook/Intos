@@ -8,6 +8,7 @@ export const APPS = [
     icon: 'BarChart3',
     description: 'Real-time analytics and business intelligence',
     color: '#00E5FF',
+    category: 'Analytics',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const APPS = [
     icon: 'GraduationCap',
     description: 'Learning management and certification tracking',
     color: '#6B9FFF',
+    category: 'HR & Learning',
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export const APPS = [
     icon: 'Activity',
     description: 'Team health and engagement metrics',
     color: '#48E5AC',
+    category: 'HR & Learning',
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ export const APPS = [
     icon: 'Ticket',
     description: 'AI-powered support ticket management',
     color: '#FF7A50',
+    category: 'Support',
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ export const APPS = [
     icon: 'Target',
     description: 'OKRs, goals, and strategic planning',
     color: '#B794F6',
+    category: 'Operations',
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ export const APPS = [
     icon: 'MessageSquare',
     description: 'Customer feedback and sentiment analysis',
     color: '#FCD34D',
+    category: 'Support',
   },
   {
     id: 7,
@@ -56,6 +62,7 @@ export const APPS = [
     icon: 'Users',
     description: 'CRM and contact management hub',
     color: '#00E5FF',
+    category: 'Support',
   },
   {
     id: 8,
@@ -64,6 +71,7 @@ export const APPS = [
     icon: 'Bot',
     description: 'Automation orchestration and bot management',
     color: '#CBD5E0',
+    category: 'Operations',
   },
   {
     id: 9,
@@ -72,6 +80,7 @@ export const APPS = [
     icon: 'MessagesSquare',
     description: 'Team communication and collaboration',
     color: '#6B9FFF',
+    category: 'Productivity',
   },
   {
     id: 10,
@@ -80,6 +89,7 @@ export const APPS = [
     icon: 'Terminal',
     description: 'System administration and operations',
     color: '#E2E8F0',
+    category: 'Operations',
   },
   {
     id: 11,
@@ -88,6 +98,7 @@ export const APPS = [
     icon: 'Shield',
     description: 'Compliance, security, and audit trails',
     color: '#34D399',
+    category: 'Operations',
   },
   {
     id: 12,
@@ -96,6 +107,7 @@ export const APPS = [
     icon: 'Brain',
     description: 'AI knowledge base and documentation',
     color: '#B794F6',
+    category: 'Productivity',
   },
   {
     id: 13,
@@ -104,6 +116,7 @@ export const APPS = [
     icon: 'GitBranch',
     description: 'Workflow automation and process builder',
     color: '#FF9470',
+    category: 'Operations',
   },
   {
     id: 14,
@@ -112,6 +125,7 @@ export const APPS = [
     icon: 'Smile',
     description: 'Emotion detection and sentiment tracking',
     color: '#FCD34D',
+    category: 'Analytics',
   },
   {
     id: 15,
@@ -120,6 +134,7 @@ export const APPS = [
     icon: 'Bell',
     description: 'Incident management and on-call routing',
     color: '#F87171',
+    category: 'Support',
   },
   {
     id: 16,
@@ -128,6 +143,7 @@ export const APPS = [
     icon: 'Layers',
     description: 'Priority queue and ticket routing AI',
     color: '#48E5AC',
+    category: 'Support',
   },
   {
     id: 17,
@@ -136,6 +152,7 @@ export const APPS = [
     icon: 'Handshake',
     description: 'Partner portal and collaboration workspace',
     color: '#6B9FFF',
+    category: 'Support',
   },
   {
     id: 18,
@@ -144,6 +161,7 @@ export const APPS = [
     icon: 'Sparkles',
     description: 'No-code app builder and customization',
     color: '#FF7A50',
+    category: 'Operations',
   },
   // New Integration Apps
   {
@@ -153,6 +171,7 @@ export const APPS = [
     icon: 'Mail',
     description: 'Unified email hub for Gmail & Outlook with AI',
     color: '#529ADB',
+    category: 'Productivity',
   },
   {
     id: 20,
@@ -161,6 +180,7 @@ export const APPS = [
     icon: 'BookOpen',
     description: 'Notion integration and knowledge management',
     color: '#46A57B',
+    category: 'Productivity',
   },
   {
     id: 21,
@@ -169,6 +189,7 @@ export const APPS = [
     icon: 'Calendar',
     description: 'Google Calendar sync and smart scheduling',
     color: '#E27305',
+    category: 'Productivity',
   },
   {
     id: 22,
@@ -177,6 +198,7 @@ export const APPS = [
     icon: 'FolderOpen',
     description: 'Google Drive & Dropbox file management',
     color: '#529ADB',
+    category: 'Productivity',
   },
   {
     id: 23,
@@ -185,6 +207,7 @@ export const APPS = [
     icon: 'PieChart',
     description: 'Pivot tables and advanced analytics',
     color: '#46A57B',
+    category: 'Analytics',
   },
   {
     id: 24,
@@ -193,6 +216,7 @@ export const APPS = [
     icon: 'Plug',
     description: 'CRM connectors (HubSpot, Freshdesk, Zendesk)',
     color: '#E27305',
+    category: 'Operations',
   },
   {
     id: 25,
@@ -201,6 +225,7 @@ export const APPS = [
     icon: 'ClipboardList',
     description: 'Customer feedback and survey management',
     color: '#529ADB',
+    category: 'Analytics',
   },
   {
     id: 26,
@@ -209,6 +234,7 @@ export const APPS = [
     icon: 'Zap',
     description: 'Visual automation builder and orchestration',
     color: '#E27305',
+    category: 'Operations',
   },
 ] as const;
 

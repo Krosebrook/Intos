@@ -18,6 +18,7 @@
         'lucide-react@0.487.0': 'lucide-react',
         'input-otp@1.4.2': 'input-otp',
         'hono@4': 'hono',
+        'figma:asset/218c0e5250419e02190c065fae4907c6d7e6f64f.png': path.resolve(__dirname, './src/assets/218c0e5250419e02190c065fae4907c6d7e6f64f.png'),
         'embla-carousel-react@8.6.0': 'embla-carousel-react',
         'cmdk@1.1.1': 'cmdk',
         'class-variance-authority@0.7.1': 'class-variance-authority',

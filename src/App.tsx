@@ -186,7 +186,7 @@ export default function App() {
       
       {/* Overlay for better text readability */}
       <div 
-        className="fixed inset-0 bg-gradient-to-b from-[#33475B]/40 via-[#33475B]/20 to-[#33475B]/60"
+        className="fixed inset-0 bg-gradient-to-b from-[#33475B]/90 via-[#33475B]/85 to-[#33475B]/95 backdrop-blur-sm"
         style={{ zIndex: -1 }} 
       />
 
