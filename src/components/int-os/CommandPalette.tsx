@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Search, ArrowRight, type LucideIcon } from 'lucide-react';
 import * as Icons from 'lucide-react';
-import { Dialog, DialogContent } from '../ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '../ui/dialog';
 import { APPS } from '../../lib/constants';
 
 interface CommandPaletteProps {
@@ -113,6 +113,10 @@ export function CommandPalette({ isOpen, onClose, onNavigate }: CommandPalettePr
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="p-0 gap-0 bg-[#0F213C] border-white/10 max-w-2xl">
+        <DialogTitle className="sr-only">Command Palette</DialogTitle>
+        <DialogDescription className="sr-only">
+          Search and navigate to apps, or run commands quickly using keyboard shortcuts
+        </DialogDescription>
         {/* Search Input */}
         <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
           <Search className="w-5 h-5 text-[#A8B2C1]" />
