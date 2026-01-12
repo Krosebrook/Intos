@@ -1,7 +1,8 @@
 
   {
-      "name": "Master Figma File Creation",
-      "version": "0.1.0",
+      "name": "int-os",
+      "version": "2.5.0",
+      "description": "INT OS - Unified Operations Platform with 18 integrated internal apps",
       "private": true,
       "dependencies": {
           "@radix-ui/react-accordion": "^1.2.3",
