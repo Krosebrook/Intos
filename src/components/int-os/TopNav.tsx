@@ -1,6 +1,7 @@
-import { Command, Settings, User, Globe, Search } from 'lucide-react';
+import { Command, Settings, User, Globe, Search, Activity, AlertCircle } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Avatar, AvatarFallback } from '../ui/avatar';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 
 interface TopNavProps {
   onCommandPaletteOpen: () => void;
@@ -8,6 +9,9 @@ interface TopNavProps {
 }
 
 export function TopNav({ onCommandPaletteOpen, currentApp }: TopNavProps) {
+  // Mocked global health status
+  const systemHealth = 'warning'; // 'healthy', 'warning', 'error'
+
   return (
     <nav 
       className="glass-effect fixed top-0 left-0 right-0 h-16 z-50 border-b border-white/10 backdrop-blur-md"
@@ -52,6 +56,36 @@ export function TopNav({ onCommandPaletteOpen, currentApp }: TopNavProps) {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2">
+          {/* System Health Indicator */}
+          <TooltipProvider>
+            <Tooltip delayDuration={0}>
+              <TooltipTrigger asChild>
+                <button className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors mr-2">
+                  <div className={`w-2 h-2 rounded-full ${
+                    systemHealth === 'healthy' ? 'bg-green-500' : 
+                    systemHealth === 'warning' ? 'bg-yellow-500 animate-pulse' : 'bg-red-500 animate-pulse'
+                  }`} />
+                  <span className="text-xs font-medium text-[#A8B2C1] hidden xl:block">System Status</span>
+                </button>
+              </TooltipTrigger>
+              <TooltipContent className="bg-[#0F213C] border-white/10 text-white p-3">
+                <div className="space-y-2">
+                  <p className="font-semibold text-sm">System Health: Warning</p>
+                  <div className="text-xs text-[#A8B2C1] space-y-1">
+                    <div className="flex items-center gap-2">
+                      <AlertCircle className="w-3 h-3 text-red-500" />
+                      <span>Freshdesk: Auth Expired</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Activity className="w-3 h-3 text-green-500" />
+                      <span>HubSpot: Operational</span>
+                    </div>
+                  </div>
+                </div>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
           <Button
             variant="ghost"
             size="icon"
